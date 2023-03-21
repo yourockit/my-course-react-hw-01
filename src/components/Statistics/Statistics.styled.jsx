@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Container = styled.div`
+export const Container = styled.section`
 text-align: center;
 width: 300px;
 font-size: 16px;
@@ -12,48 +12,31 @@ margin-left: auto;
 margin-bottom: 20px;
 `;
 
-export const Description = styled.div`
-padding-bottom: 25px;
-`;
-
-export const Avatar = styled.img`
-border: 1px #858585 solid;
-border-radius: 50%;
-height: 150px;
-margin: 25px;
-`;
-
-export const Name = styled.p`
+export const Title = styled.h2`
+display: flex;
+justify-content: center;
+align-items: center;
+height: 80px;
 font-size: 20px;
 font-weight: bold;
-margin: 5px;
-`;
-
-export const Tag = styled.p`
 color: #858585;
-font-weight: 700;
-margin: 5px;
+text-transform: uppercase;
+border-bottom: 1px #858585 solid;
+margin: 0;
 `;
 
-export const Location = styled.p`
-color: #858585;
-font-weight: 700;
-margin: 5px;
-`;
-
-export const Stats = styled.ul`
+export const StatList = styled.ul`
 display: flex;
 justify-content: center;
 padding: 0;
 margin: 0;
 `;
 
-export const StatEl = styled.li`
+export const Item = styled.li`
 display: flex;
 flex-direction: column;
 justify-content: center;
 list-style-type: none;
-border-top: 1px #858585 solid;
 width: 100px;
 height: 70px;
 `; 
@@ -63,7 +46,7 @@ color: #858585;
 font-weight: 700;
 `;
 
-export const Quantity = styled.span`
+export const Percentage = styled.span`
 font-size: 18px;
 font-weight: bold; 
 `;

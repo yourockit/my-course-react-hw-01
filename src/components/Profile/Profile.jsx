@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import {ProfileWrap, 
+import {Container, 
     Description, 
     Avatar, 
     Name, 
@@ -12,7 +12,7 @@ import {ProfileWrap,
 from './Profile.styled';
 
 export const Profile = ({username, tag, location, avatar, stats}) => {
-return <ProfileWrap>
+return <Container>
 <Description>
   <Avatar
     src={avatar}
@@ -20,7 +20,7 @@ return <ProfileWrap>
     className="avatar"
   />
   <Name className="name">{username}</Name>
-  <Tag className="tag">{tag}</Tag>
+  <Tag className="tag">@{tag}</Tag>
   <Location className="location">{location}</Location>
 </Description>
 
@@ -38,7 +38,7 @@ return <ProfileWrap>
     <Quantity>{stats.likes}</Quantity>
   </StatEl>
 </Stats>
-</ProfileWrap>
+</Container>
 };
 
 Profile.propTypes = {
@@ -46,9 +46,11 @@ Profile.propTypes = {
     tag: PropTypes.string.isRequired, 
     location: PropTypes.string.isRequired, 
     avatar: PropTypes.string.isRequired,
-    stats: PropTypes.exact({
+    stats: PropTypes.arrayOf(
+    PropTypes.exact({
         followers: PropTypes.number.isRequired,
         views: PropTypes.number.isRequired,
-        stats: PropTypes.number.isRequired,
+        likes: PropTypes.number.isRequired,
     }),
+    )
 };
