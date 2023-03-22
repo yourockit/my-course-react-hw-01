@@ -6,7 +6,6 @@ list-style-type: none;
 width: 300px;
 font-size: 16px;
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.22);
-border: 1px #858585 solid;
 border-radius: 6px;
 margin-right: auto;
 margin-left: auto;
