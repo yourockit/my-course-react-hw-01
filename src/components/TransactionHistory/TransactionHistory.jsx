@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { TransactionItem } from "./TransactionItem/TransactionItem";
 import { TransitionWrap, Container, Item } from "./TransactionHistory.styled";
 
@@ -21,5 +22,16 @@ export const TransactionHistory = ({items}) => {
     </TransactionItem>
   ))}
 </TransitionWrap>
+    )
+};
+
+TransactionHistory.prototype ={
+    items: PropTypes.arrayOf(
+        PropTypes.exact({
+            key: PropTypes.number.isRequired,
+            type: PropTypes.string.isRequired,
+            amount: PropTypes.number.isRequired,
+            currency: PropTypes.string.isRequired,
+        })
     )
 };
